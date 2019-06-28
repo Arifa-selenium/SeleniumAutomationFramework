@@ -14,10 +14,10 @@ public class OrderHistoryPOM {
 	}
 	
 	//Order History
-	@FindBy(xpath="//*[@id=\"top-links1\"]/ul/li[3]/a/span[1]")
+	@FindBy(xpath="//li[@class='dropdown myaccount']")
 	private WebElement userIcon;
 	
-	@FindBy(xpath="//*[@id=\"top-links1\"]/ul/li[3]/ul/li[2]/a")
+	@FindBy(linkText="Order History")
 	private WebElement OrderHistory;
 	
 	@FindBy(xpath="//table/tbody/tr/td[1]")

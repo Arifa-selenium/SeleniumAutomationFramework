@@ -13,7 +13,7 @@ public class RecoverPasswordPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//*[@id=\"top-links1\"]/ul/li[3]")
+	@FindBy(xpath="//i[@class='fa fa-user']")
 	private WebElement MyAccount;
 	
 	@FindBy(xpath="//a[contains(text(),'Login')]")
@@ -28,7 +28,7 @@ public class RecoverPasswordPOM {
 	@FindBy(xpath="//input[@value='Login']")
 	private WebElement loginBtn; 
 	
-	@FindBy(xpath="//*[@id=\"content\"]/div/div[2]/div/form/div[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Forgotten Password')]")
 	private WebElement ForgottenPassword;
 	
 	@FindBy(id="input-email")
@@ -37,10 +37,10 @@ public class RecoverPasswordPOM {
 	@FindBy(xpath="//input[(@type='submit')]")
 	private WebElement Continue;
 	
-	@FindBy(xpath="/html/body/div[1]/div[1]")
+	@FindBy(xpath="//div[@class='alert alert-success']")
 	private WebElement MsgText;
 	
-	//Defining functions for the Fields on Register Page
+	//Defining functions for the Fields on Forgotten Page
 	
 	public void clickMyAccount()
 	{

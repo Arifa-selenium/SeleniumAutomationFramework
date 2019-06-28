@@ -74,7 +74,7 @@ public class RegisterTest {
 		test.log(LogStatus.PASS, "Firstname is Entered Successfully");
 		registerPOM.sendlastname("B");
 		test.log(LogStatus.PASS, "Lastname is Entered Successfully");
-		registerPOM.sendemail("neha4@gmail.com");
+		registerPOM.sendemail("neha5@gmail.com");
 		test.log(LogStatus.PASS, "Email is Entered Successfully");
 		registerPOM.sendtelephone("9241835892");
 		test.log(LogStatus.PASS, "Telephone number is Entered Successfully");

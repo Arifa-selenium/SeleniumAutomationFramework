@@ -79,7 +79,7 @@ public class EditAccountTest {
 		String ActualTitle=editaccountPOM.alertmsgtext();
 		assertEquals(ActualTitle, ExpectedTitle);
 		
-		screenShot.captureScreenShot();
+		screenShot.captureScreenShot("EditAccSuccess");
 		
 		Thread.sleep(5000);
 	}

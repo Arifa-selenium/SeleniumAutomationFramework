@@ -71,7 +71,7 @@ public class OrderHistoryTest {
 		assertEquals(orderhistoryPOM.StatusDisplayed(), true);
 		assertEquals(orderhistoryPOM.TotalDisplayed(), true);
 		assertEquals(orderhistoryPOM.DateAddedDisplayed(), true);
-		
+		screenShot.captureScreenShot("OrderHistory");
 		//Click View Icon
 		orderhistoryPOM.clickViewIcon();
 		
@@ -79,7 +79,7 @@ public class OrderHistoryTest {
 		assertEquals(orderhistoryPOM.OrderHistoryTableDisplayed(), true);
 		assertEquals(orderhistoryPOM.ProductDetailsDisplayed(), true);
 		
-		screenShot.captureScreenShot("First");
+		screenShot.captureScreenShot("OrderHistorySuccess");
 		Thread.sleep(5000);
 	}
 }

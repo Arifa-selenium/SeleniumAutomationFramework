@@ -34,7 +34,7 @@ public class EditAccountPOM {
 	@FindBy(xpath="//input[@type='submit']")
 	private WebElement Continue;
 	
-	@FindBy(xpath="/html/body/div[1]/div[1]")
+	@FindBy(xpath="//div[@class='alert alert-success']")
 	private WebElement MsgText;
 	
 	

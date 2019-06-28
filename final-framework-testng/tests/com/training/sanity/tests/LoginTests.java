@@ -82,7 +82,7 @@ public class LoginTests {
 		loginPOM.clickLoginBtn(); 
 		
 		try {
-		String ExpectedTitle="My Accoun";
+		String ExpectedTitle="My Account";
 		String ActualTitle=driver.getTitle();
 		assertEquals(ActualTitle, ExpectedTitle);
 		log.info("Login Successful");

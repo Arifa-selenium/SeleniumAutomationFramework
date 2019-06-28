@@ -13,7 +13,7 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//*[@id=\"top-links1\"]/ul/li[3]")
+	@FindBy(xpath="//i[@class='fa fa-user']")
 	private WebElement MyAccount;
 	
 	@FindBy(xpath="//a[contains(text(),'Login')]")
