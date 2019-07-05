@@ -6,16 +6,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
@@ -23,18 +19,15 @@ import com.training.utility.DriverNames;
 
 
 
-public class LoginTests {
+public class InvalidLoginTest {
 
-	static Logger log = Logger.getLogger(LoginTests.class.getName());//log4j
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 	
-	static ExtentReports extent;//Extent Reports
-    ExtentTest test;
-    
+	  
     
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -59,41 +52,25 @@ public class LoginTests {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		extent.endTest(test);
-		extent.flush();
-        extent.close();
 		driver.quit();
 	}
 	@Test
-	public void validLoginTest() throws InterruptedException {
-		extent = new ExtentReports("C://Output//Logintest.html", true);
-		test = extent.startTest("Login Test");
-		test.log(LogStatus.PASS, "Application link opened successfully...");
-		
-		loginPOM.clickMyAccount();
-		test.log(LogStatus.PASS, "My Account link is clicked");
-		loginPOM.clickonLogin();
-		test.log(LogStatus.PASS, "Login link is clicked");
-		loginPOM.sendUserName("neha@gmail.com");
-		loginPOM.sendPassword("Neha123");
-		test.log(LogStatus.PASS, "Username & Password are Entered Successfully");
-		log.info("Entering the Username & Password for login");
-		loginPOM.clickLoginBtn(); 
-		
-		try {
-		String ExpectedTitle="My Account";
-		String ActualTitle=driver.getTitle();
-		assertEquals(ActualTitle, ExpectedTitle);
-		log.info("Login Successful");
-		test.log(LogStatus.PASS, "Login is Successful");
+	public void InvalidLogin() throws InterruptedException {
 				
-		screenShot.captureScreenShot("Login");
+		loginPOM.clickMyAccount();
+		loginPOM.clickonLogin();
+		loginPOM.sendUserName("neha@gmail.com");
+		loginPOM.sendPassword("Wrong123");
+		loginPOM.clickLoginBtn(); 
+		screenShot.captureScreenShot("InvalidUserID&Pwd");
+		
+		
+		String ExpectedErrorMsg="Warning: No match for E-Mail Address and/or Password.";
+		String ActualErrorMsg=loginPOM.Errormsg();
+		assertEquals(ActualErrorMsg, ExpectedErrorMsg);
+			
+		screenShot.captureScreenShot("LoginError");
 		Thread.sleep(5000);
+		
 		}
-		catch(Error e)
-		{
-			log.error(e);
-			test.log(LogStatus.FAIL, e);
-		}
-	}
 }

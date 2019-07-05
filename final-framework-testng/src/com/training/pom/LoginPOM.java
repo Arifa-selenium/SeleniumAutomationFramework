@@ -28,6 +28,8 @@ public class LoginPOM {
 	@FindBy(xpath="//input[@value='Login']")
 	private WebElement loginBtn; 
 	
+	@FindBy(xpath="//div[@class='alert alert-danger']")
+	private WebElement Errormsg;
 	
 	public void clickMyAccount()
 	{
@@ -51,5 +53,9 @@ public class LoginPOM {
 	
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
+	}
+	
+	public String Errormsg() {
+		return Errormsg.getText();
 	}
 }

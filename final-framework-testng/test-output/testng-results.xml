@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19610" started-at="2019-06-28T11:27:58Z" finished-at="2019-06-28T11:28:17Z">
+  <suite name="Default suite" duration-ms="20716" started-at="2019-07-05T17:17:48Z" finished-at="2019-07-05T17:18:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19610" started-at="2019-06-28T11:27:58Z" finished-at="2019-06-28T11:28:17Z">
-      <class name="com.training.sanity.tests.OrderHistoryTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.OrderHistoryTest@6a4f787b]" name="setUpBeforeClass" is-config="true" duration-ms="17" started-at="2019-06-28T11:27:58Z" finished-at="2019-06-28T11:27:58Z">
+    <test name="Default test" duration-ms="20716" started-at="2019-07-05T17:17:48Z" finished-at="2019-07-05T17:18:09Z">
+      <class name="com.training.sanity.tests.AdminAddProductTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.AdminAddProductTest@6a4f787b]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2019-07-05T17:17:48Z" finished-at="2019-07-05T17:17:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.OrderHistoryTest@6a4f787b]" name="setUp" is-config="true" duration-ms="7907" started-at="2019-06-28T11:27:58Z" finished-at="2019-06-28T11:28:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.AdminAddProductTest@6a4f787b]" name="setUp" is-config="true" duration-ms="6546" started-at="2019-07-05T17:17:48Z" finished-at="2019-07-05T17:17:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validOrderHistoryTest()[pri:0, instance:com.training.sanity.tests.OrderHistoryTest@6a4f787b]" name="validOrderHistoryTest" duration-ms="9980" started-at="2019-06-28T11:28:06Z" finished-at="2019-06-28T11:28:16Z">
+        <test-method status="PASS" signature="AdminAddProduct()[pri:0, instance:com.training.sanity.tests.AdminAddProductTest@6a4f787b]" name="AdminAddProduct" duration-ms="13149" started-at="2019-07-05T17:17:55Z" finished-at="2019-07-05T17:18:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validOrderHistoryTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.OrderHistoryTest@6a4f787b]" name="tearDown" is-config="true" duration-ms="1706" started-at="2019-06-28T11:28:16Z" finished-at="2019-06-28T11:28:17Z">
+        </test-method> <!-- AdminAddProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.AdminAddProductTest@6a4f787b]" name="tearDown" is-config="true" duration-ms="1005" started-at="2019-07-05T17:18:08Z" finished-at="2019-07-05T17:18:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.OrderHistoryTest -->
+      </class> <!-- com.training.sanity.tests.AdminAddProductTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
