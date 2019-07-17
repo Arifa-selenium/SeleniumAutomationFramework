@@ -8,10 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class RegisterPOM {
+public class RegisterDBPOM {
 	private WebDriver driver; 
 	
-	public RegisterPOM(WebDriver driver) {
+	public RegisterDBPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -195,7 +195,58 @@ public class RegisterPOM {
 	
 	public boolean ContinueDisplayed() {
 		return Continuebutton.isDisplayed();
-		 
 	}
-	
+		
+		//Defining the Get Methods to fetch data from the Textboxes
+		 
+		public String getfirstname() {
+			return this.firstname.getAttribute("value");
+		}
+		
+		public String getlastname() {
+			return lastname.getAttribute("value");
+		}
+		
+		public String getemail() {
+			return email.getAttribute("value");
+		}
+		
+		public String gettelephone() {
+			return telephone.getAttribute("value");
+		}
+		public String getaddress1() {
+			return address1.getAttribute("value");
+		}
+		
+		public String getaddress2() {
+			return address2.getAttribute("value");
+		}
+		
+		public String getcity() {
+			return this.city.getAttribute("value");
+		}
+		
+		public String getpostcode() {
+			return postcode.getAttribute("value");
+		}
+		
+		public String getCountry() {
+			Select sel = new Select(this.Country);
+			return sel.getFirstSelectedOption().getText();
+		}
+		
+		public String getState() {
+			Select sel = new Select(this.state);
+			return sel.getFirstSelectedOption().getText();
+		}
+		
+		public String getPassword() {
+			return password.getAttribute("value");
+		}
+		
+		public String getconfirmPassword() {
+			return passwordconfirm.getAttribute("value");
+		}
+		
 }
+	
